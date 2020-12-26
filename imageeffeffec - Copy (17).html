@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+    <link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+    <link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+    <title>CodePen - #1573 - Image Hover</title>
+    <link rel='stylesheet' href='https://www.littlesnippets.net/css/codepen-result.css'>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Open+Sans:600;);
+        .snip1573 {
+            background-color: #000;
+            display: inline-block;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            margin: 10px;
+            max-width: 315px;
+            min-width: 230px;
+            overflow: hidden;
+            position: relative;
+            text-align: center;
+            width: 100%;
+        }
+        
+        .snip1573 * {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-transition: all 0.35s ease;
+            transition: all 0.35s ease;
+        }
+        
+        .snip1573:before,
+        .snip1573:after {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            -webkit-transition: all 0.35s ease;
+            transition: all 0.35s ease;
+            background-color: #000000;
+            border-left: 3px solid #fff;
+            border-right: 3px solid #fff;
+            content: '';
+            opacity: 0.9;
+            z-index: 1;
+        }
+        
+        .snip1573:before {
+            -webkit-transform: skew(45deg) translateX(-155%);
+            transform: skew(45deg) translateX(-155%);
+        }
+        
+        .snip1573:after {
+            -webkit-transform: skew(45deg) translateX(155%);
+            transform: skew(45deg) translateX(155%);
+        }
+        
+        .snip1573 img {
+            backface-visibility: hidden;
+            max-width: 100%;
+            vertical-align: top;
+        }
+        
+        .snip1573 figcaption {
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            z-index: 2;
+            -webkit-transform: translate(-50%, -50%) scale(0.5);
+            transform: translate(-50%, -50%) scale(0.5);
+            opacity: 0;
+            -webkit-box-shadow: 0 0 10px #000000;
+            box-shadow: 0 0 10px #000000;
+        }
+        
+        .snip1573 h3 {
+            background-color: #000000;
+            border: 2px solid #fff;
+            color: #fff;
+            font-size: 1em;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin: 0;
+            padding: 5px 10px;
+            text-transform: uppercase;
+        }
+        
+        .snip1573 a {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 3;
+        }
+        
+        .snip1573:hover>img,
+        .snip1573.hover>img {
+            opacity: 0.5;
+        }
+        
+        .snip1573:hover:before,
+        .snip1573.hover:before {
+            -webkit-transform: skew(45deg) translateX(-55%);
+            transform: skew(45deg) translateX(-55%);
+        }
+        
+        .snip1573:hover:after,
+        .snip1573.hover:after {
+            -webkit-transform: skew(45deg) translateX(55%);
+            transform: skew(45deg) translateX(55%);
+        }
+        
+        .snip1573:hover figcaption,
+        .snip1573.hover figcaption {
+            -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 1;
+        }
+    </style>
+    <script>
+        window.console = window.console || function(t) {};
+    </script>
+    <script>
+        if (document.location.search.match(/type=embed/gi)) {
+            window.parent.postMessage("resize", "*");
+        }
+    </script>
+</head>
+
+<body translate="no">
+    <figure class="snip1573">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample89.jpg" alt="sample89" />
+        <figcaption>
+            <h3>Buy Now</h3>
+        </figcaption>
+        <a href="#"></a>
+    </figure>
+    <figure class="snip1573 hover"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample94.jpg" alt="sample94" />
+        <figcaption>
+            <h3>Read More</h3>
+        </figcaption>
+        <a href="#"></a>
+    </figure>
+    <figure class="snip1573"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample92.jpg" alt="sample92" />
+        <figcaption>
+            <h3>Join Us</h3>
+        </figcaption>
+        <a href="#"></a>
+    </figure>
+    <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script id="rendered-js">
+        /* Demo purposes only */
+        $(".hover").mouseleave(
+            function() {
+                $(this).removeClass("hover");
+            });
+        //# sourceURL=pen.js
+    </script>
+</body>
+
+</html>

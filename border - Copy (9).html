@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+    <link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+    <link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+    <title>CodePen - SVG Ellipse Border Animation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300);
+        body {
+            align-items: center;
+            background: #222;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            justify-content: center;
+        }
+        
+        .svg-container {
+            height: 124px;
+            position: relative;
+            width: 124px;
+        }
+        
+        .svg-container h1 {
+            color: #aaa;
+            font-family: "Source Sans Pro";
+            font-size: 1.2rem;
+            left: 50%;
+            letter-spacing: 4px;
+            position: absolute;
+            text-align: center;
+            top: -60px;
+            transform: translateX(-50%);
+            width: 100%;
+        }
+        
+        .circle {
+            height: 124px;
+            width: 124px;
+        }
+        
+        .circle .background {
+            fill: transparent;
+            stroke: #1abc9c;
+            transition: all 200ms ease;
+        }
+        
+        .circle .foreground {
+            fill: transparent;
+            stroke-dasharray: 377;
+            stroke-dashoffset: 377;
+            stroke: #EE3769;
+            transform-origin: 50% 50%;
+            transform: rotate(-270deg);
+            transition: all 800ms ease;
+        }
+        
+        .circle .line {
+            stroke-width: 2;
+            stroke: #1abc9c;
+            transform-origin: 50% 50%;
+            transition: all 500ms ease;
+        }
+        
+        .circle .line2 {
+            transform: rotate(-90deg);
+        }
+        
+        .circle:hover {
+            cursor: pointer;
+        }
+        
+        .circle:hover .background {
+            stroke: transparent;
+        }
+        
+        .circle:hover .foreground {
+            stroke-dashoffset: 0;
+            transform: rotate(-90deg);
+        }
+        
+        .circle:hover .line {
+            stroke: #EE3769;
+        }
+        
+        .circle:hover .line {
+            transform: rotate(180deg);
+        }
+        
+        .circle:hover .line2 {
+            transform: rotate(0);
+        }
+    </style>
+    <script>
+        window.console = window.console || function(t) {};
+    </script>
+    <script>
+        if (document.location.search.match(/type=embed/gi)) {
+            window.parent.postMessage("resize", "*");
+        }
+    </script>
+</head>
+
+<body translate="no">
+    <section class="svg-container">
+        <h1>Hover me</h1>
+        <svg class="circle" xmlns="http://www.w3.org/2000/svg">
+<g>
+<ellipse class="background" ry="60" rx="60" cy="62.5" cx="62.5" stroke-width="2" />
+<ellipse class="foreground" ry="60" rx="60" cy="62.5" cx="62.5" stroke-width="2" />
+<line class="line line1" x1="52" y1="62" x2="74" y2="62" />
+<line class="line line2" x1="52" y1="62" x2="74" y2="62" />
+</g>
+</svg>
+    </section>
+</body>
+
+</html>

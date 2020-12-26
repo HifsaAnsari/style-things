@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html lang="en" class="<link href=" https: fonts.googleapis.com css?family=Montserrat&display=swap " rel="stylesheet ">">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+    <link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+    <link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+    <title>CodePen - One div hover animation</title>
+    <style>
+        div {
+            display: -webkit-box;
+            display: flex;
+            -webkit-box-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            justify-content: center;
+            position: relative;
+            margin: 20px auto;
+            width: 250px;
+            height: 250px;
+            background: white;
+            border-radius: 75px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            font-weight: lighter;
+            letter-spacing: 2px;
+            -webkit-transition: 1s box-shadow;
+            transition: 1s box-shadow;
+        }
+        
+        div:hover {
+            box-shadow: 0 5px 35px 0px rgba(0, 0, 0, .1);
+        }
+        
+        div:hover:before,
+        div:hover:after {
+            display: block;
+            content: '';
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            background: #FDA8CF;
+            border-radius: 75px;
+            z-index: -1;
+            -webkit-animation: 1s clockwise infinite;
+            animation: 1s clockwise infinite;
+        }
+        
+        div:hover:after {
+            background: #F3CE5E;
+            -webkit-animation: 2s counterclockwise infinite;
+            animation: 2s counterclockwise infinite;
+        }
+        
+        @-webkit-keyframes clockwise {
+            0% {
+                top: -5px;
+                left: 0;
+            }
+            12% {
+                top: -2px;
+                left: 2px;
+            }
+            25% {
+                top: 0;
+                left: 5px;
+            }
+            37% {
+                top: 2px;
+                left: 2px;
+            }
+            50% {
+                top: 5px;
+                left: 0;
+            }
+            62% {
+                top: 2px;
+                left: -2px;
+            }
+            75% {
+                top: 0;
+                left: -5px;
+            }
+            87% {
+                top: -2px;
+                left: -2px;
+            }
+            100% {
+                top: -5px;
+                left: 0;
+            }
+        }
+        
+        @keyframes clockwise {
+            0% {
+                top: -5px;
+                left: 0;
+            }
+            12% {
+                top: -2px;
+                left: 2px;
+            }
+            25% {
+                top: 0;
+                left: 5px;
+            }
+            37% {
+                top: 2px;
+                left: 2px;
+            }
+            50% {
+                top: 5px;
+                left: 0;
+            }
+            62% {
+                top: 2px;
+                left: -2px;
+            }
+            75% {
+                top: 0;
+                left: -5px;
+            }
+            87% {
+                top: -2px;
+                left: -2px;
+            }
+            100% {
+                top: -5px;
+                left: 0;
+            }
+        }
+        
+        @-webkit-keyframes counterclockwise {
+            0% {
+                top: -5px;
+                right: 0;
+            }
+            12% {
+                top: -2px;
+                right: 2px;
+            }
+            25% {
+                top: 0;
+                right: 5px;
+            }
+            37% {
+                top: 2px;
+                right: 2px;
+            }
+            50% {
+                top: 5px;
+                right: 0;
+            }
+            62% {
+                top: 2px;
+                right: -2px;
+            }
+            75% {
+                top: 0;
+                right: -5px;
+            }
+            87% {
+                top: -2px;
+                right: -2px;
+            }
+            100% {
+                top: -5px;
+                right: 0;
+            }
+        }
+        
+        @keyframes counterclockwise {
+            0% {
+                top: -5px;
+                right: 0;
+            }
+            12% {
+                top: -2px;
+                right: 2px;
+            }
+            25% {
+                top: 0;
+                right: 5px;
+            }
+            37% {
+                top: 2px;
+                right: 2px;
+            }
+            50% {
+                top: 5px;
+                right: 0;
+            }
+            62% {
+                top: 2px;
+                right: -2px;
+            }
+            75% {
+                top: 0;
+                right: -5px;
+            }
+            87% {
+                top: -2px;
+                right: -2px;
+            }
+            100% {
+                top: -5px;
+                right: 0;
+            }
+        }
+    </style>
+    <script>
+        window.console = window.console || function(t) {};
+    </script>
+    <script>
+        if (document.location.search.match(/type=embed/gi)) {
+            window.parent.postMessage("resize", "*");
+        }
+    </script>
+</head>
+
+<body translate="no">
+    <div>hover over me</div>
+</body>
+
+</html>

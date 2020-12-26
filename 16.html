@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Georgia, Times, 'Times New Roman', serif;
+            height: 4000px;
+        }
+        
+        #container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 400%;
+            height: 100vh;
+            display: flex;
+        }
+        
+        #container .section {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            padding: 100px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #container .section .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #container .section .content .text {
+            padding-right: 50px;
+        }
+        
+        #container .section .content .text h1 {
+            margin: 0;
+            padding: 0;
+            font-size: 4em;
+        }
+        
+        #container .section .content .text p {
+            font-size: 1.1em;
+        }
+        
+        #container .content img {
+            max-width: 400px;
+        }
+        
+        #container .section .over {
+            position: relative;
+        }
+        
+        #container .section .over figure img {
+            max-width: 400px;
+            top: -6px;
+            position: absolute;
+            left: 10px;
+            height: 450px;
+            padding-left: 50%;
+            z-index: 1;
+            margin-left: 980%;
+        }
+        
+        #container .section .red {
+            background: tan;
+            width: 500%;
+            padding-left: 12%;
+            height: 450px;
+            margin-left: 990%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div class="section">
+
+            <div class="over">
+                <figure>
+                    <img src="02.JPG">
+                </figure>
+
+                <div class="red"></div>
+            </div>
+
+            <div class="content">
+                <div class="text">
+                    <h1> SECtion one</h1>
+
+                    <p>
+                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,
+                        content here', making it look like readable English. Many desktop s a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it
+                        eir infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).nfancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose
+                        (injected humour and the like).
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="section">
+            <div class="content">
+                <div class="text">
+                    <h1> SECtion two</h1>
+
+                    <p>
+                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,
+                        ntent here, content here', making it look like readable English. Many des publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still
+                        in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                    </p>
+                </div>
+                <img src="02 - Copy.JPG">
+            </div>
+        </div>
+
+
+        <div class="section">
+            <div class="content">
+                <div class="text">
+                    <h1> SECtion three</h1>
+
+                    <p>
+                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,
+                        coontent here', making it look like readable English. Many des publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their
+                        infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                    </p>
+                </div>
+                <img src="02 - Copy (3).JPG">
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="content">
+                <div class="text">
+                    <h1> SECtion four</h1>
+
+                    <p>
+                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,
+                        content here', ma their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).fancy. Various versions have evolved over the years, sometimes by accident,
+                        sometimes on purpose (injected humour and the like).
+                    </p>
+                </div>
+                <img src="02 - Copy (2).JPG">
+            </div>
+        </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(window).scroll(function() {
+            var scroll = $(window).scrollTop(),
+                dh = $(document).height(),
+                wh = $(window).height();
+            value = (scroll / (dh - wh)) * 100;
+            $('#container').css('left', -value * 3 + '%');
+        })
+    </script>
+
+</body>
+
+</html>

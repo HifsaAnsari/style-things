@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+    <link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+    <link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+    <title>CodePen - Impulse Loader</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css'>
+    <style>
+        * {
+            position: relative;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #f0edd7;
+        }
+        
+        .ring-loader {
+            padding-top: 150px;
+            display: block;
+            text-align: center;
+        }
+        
+        .ring-loader:before {
+            content: "impulse";
+            position: absolute;
+            top: 32px;
+            left: -22px;
+            right: 0;
+            color: #444;
+            font-family: "Trebuchet MS";
+        }
+        
+        .ring-loader .rings {
+            position: absolute;
+            left: 50px;
+            right: 0;
+            margin: 0 auto;
+            display: block;
+            top: 280px;
+            transform: rotate(-90deg);
+        }
+        
+        .ring-loader .rings .ring {
+            letter-spacing: -100px;
+            line-height: 0;
+            display: inline-block;
+            transform-origin: -120px;
+            font-size: 10rem;
+        }
+        
+        .ring-loader .rings .ring:nth-child(1) {
+            color: #e74c3c;
+            transform: scale(1.6);
+            animation: impulse 1s 1.6s infinite alternate ease-in-out;
+        }
+        
+        .ring-loader .rings .ring:nth-child(2) {
+            color: #c0392b;
+            transform: scale(1.4);
+            animation: impulse 1s 1.4s infinite alternate ease-in-out;
+        }
+        
+        .ring-loader .rings .ring:nth-child(3) {
+            color: #e74c3c;
+            transform: scale(1.2);
+            animation: impulse 1s 1.2s infinite alternate ease-in-out;
+        }
+        
+        .ring-loader .rings .ring:nth-child(4) {
+            color: #c0392b;
+            transform: scale(1);
+            animation: impulse 1s infinite alternate ease-in-out;
+        }
+        
+        @keyframes impulse {
+            to {
+                transform: scale(-0.0000001, -2) scaleZ(-0.25151951);
+                opacity: 0.55;
+            }
+        }
+    </style>
+    <script>
+        window.console = window.console || function(t) {};
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <script>
+        if (document.location.search.match(/type=embed/gi)) {
+            window.parent.postMessage("resize", "*");
+        }
+    </script>
+</head>
+
+<body translate="no">
+    <div class="ring-loader">
+        <div class="rings">
+            <i class="ring icon-circle-blank"></i><i class="ring icon-circle-blank"></i><i class="ring icon-circle-blank"></i><i class="ring icon-circle-blank"></i>
+        </div>
+    </div>
+    <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script id="rendered-js">
+        (function() {
+
+
+        }).call(this);
+
+        //# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiPGFub255bW91cz4iXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O0FBQUEiLCJzb3VyY2VzQ29udGVudCI6WyIiXX0=
+        //# sourceURL=coffeescript
+        //# sourceURL=pen.js
+    </script>
+</body>
+
+</html>

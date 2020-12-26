@@ -1,0 +1,128 @@
+<!--<link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+font-family: 'Oswald', sans-serif;-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+  <script src="all.js"></script>
+   <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>labding page with slider</title>
+</head>
+<body>
+   
+   <div id="topnav">
+       <i class="fas fa-bars"></i>
+   </div>
+    
+    
+    <div id="leftnav">
+        <ul>
+            <li>caps</li>
+            <li>belt</li>
+            <li>pants</li>
+            <li class="sho">shoes</li>
+            <li>extra</li>
+        </ul>
+    </div>
+    
+    
+    <div id="bottom">
+        <ul>
+            <li>about us</li>
+            <li>contact us</li>
+        </ul>
+    </div>
+    
+    
+    <div id="main">
+        <div id="left">
+            <h1>choose<br/>your<br/>favourite</h1>
+        </div>
+        <div id="midd">
+            <div id="slider">
+                <div class="slid slid1"></div>
+                <div class="slid slid2"></div>
+                <div class="slid slid3"></div>
+                <div class="slid slid4"></div>
+            </div>
+        </div>
+        <div id="right">
+            <button id="preBtn">prevoius</button>
+            <ul>
+                <li>01</li>
+                <li>02</li>
+                <li>03</li>
+                <li>04</li>
+            </ul>
+            <button id="nextBtn">next</button>
+        </div>
+    </div>
+    
+    <script>
+    
+        var nextBtn=document.querySelector('#nextBtn'); 
+        var preBtn=document.querySelector('#preBtn'); 
+        var slider=document.querySelector('#slider'); 
+        var slid=document.querySelectorAll('.slid'); 
+        
+        
+        var counter=0;
+        
+        var indi=document.querySelectorAll('#right li');
+        indi[0].classList='active';
+        
+        nextBtn.addEventListener('click', function(){
+            if(counter<3){
+                counter++
+            }else{
+                counter=0;
+            }
+           
+            setTimeout(mar, 500);
+            
+            var i;
+            for(i=0; i<indi.length; i++){
+                 indi[i].classList='';
+            }
+             indi[counter].classList='active';
+            
+            var u;
+            for(u=0; u<indi.length; u++){
+                 slid[u].style.animationName='';
+            }
+             slid[counter].style.animationName='animate';
+        })
+        
+        
+        
+        preBtn.addEventListener('click', function(){
+            if(counter>0){
+                counter--
+            }else{
+                counter=3;
+            }
+            setTimeout(mar, 500)
+            
+             var i;
+            for(i=0; i<indi.length; i++){
+                 indi[i].classList='';
+            }
+             indi[counter].classList='active';
+            
+            var u;
+            for(u=0; u<indi.length; u++){
+                 slid[u].style.animationName='';
+            }
+             slid[counter].style.animationName='animate2';
+            
+        })
+        
+        function mar(){
+             slider.style.transform='translateY(-'+25*counter+'%)';
+        }
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+    <link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+    <link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+    <title>CodePen - Glow Effects</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: rgba(0, 0, 0, .9);
+        }
+        
+        ul {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        
+        ul li {
+            list-style: none;
+            width: 40px;
+            height: 40px;
+            background: #fff;
+            border-radius: 50%;
+            animation: grow 1.6s ease-in-out infinite;
+        }
+        
+        @keyframes grow {
+            0%,
+            40%,
+            100% {
+                transform: scale(0.2);
+            }
+            20% {
+                transform: scale(1);
+            }
+        }
+        
+        ul li:nth-child(1) {
+            animation-delay: -1.4s;
+            background: #ffff00;
+            box-shadow: 0 0 50px #ffff00;
+        }
+        
+        ul li:nth-child(2) {
+            animation-delay: -1.2s;
+            background: #76ff03;
+            box-shadow: 0 0 50px #76ff03;
+        }
+        
+        ul li:nth-child(3) {
+            animation-delay: -1s;
+            background: #f06292;
+            box-shadow: 0 0 50px #f06292;
+        }
+        
+        ul li:nth-child(4) {
+            animation-delay: -0.8s;
+            background: #4fc3f7;
+            box-shadow: 0 0 50px #4fc3f7;
+        }
+        
+        ul li:nth-child(5) {
+            animation-delay: -0.6s;
+            background: #ba68c8;
+            box-shadow: 0 0 50px #ba68c8;
+        }
+        
+        ul li:nth-child(6) {
+            animation-delay: -0.4s;
+            background: #f57c00;
+            box-shadow: 0 0 50px #f57c00;
+        }
+        
+        ul li:nth-child(7) {
+            animation-delay: -0.2s;
+            background: #673ab7;
+            box-shadow: 0 0 50px #673ab7;
+        }
+    </style>
+    <script>
+        window.console = window.console || function(t) {};
+    </script>
+    <script>
+        if (document.location.search.match(/type=embed/gi)) {
+            window.parent.postMessage("resize", "*");
+        }
+    </script>
+</head>
+
+<body translate="no">
+    <div>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            background: #682d67;
+        }
+        
+        .bg-area {
+            position: fixed;
+            left: -50%;
+            right: -50%;
+            top: 0;
+            animation: animate 5s ease-in-out infinite alternate;
+            background: linear-gradient(90deg, #a93563 50%, #2d276b -50%);
+            opacity: .5;
+            z-index: -1;
+            bottom: 0;
+        }
+        
+        .l1 {
+            animation-direction: alternate-reverse;
+            animation-duration: 3s;
+        }
+        
+        .l3 {
+            animation-duration: 5s;
+        }
+        
+        .bt {
+            left: 50%;
+            position: fixed;
+            text-align: center;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .bt h2 {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 55px;
+            letter-spacing: 5px;
+            color: #fff;
+            margin: 0;
+        }
+        
+        .bt h3 {
+            font-size: 30px;
+            margin: 0;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: #fff;
+        }
+        
+        @keyframes animate {
+            0% {
+                transform: translateX(-50%);
+            }
+            100% {
+                transform: translateX(50%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-area"></div>
+    <div class="bg-area l1"></div>
+    <div class="bg-area l2"></div>
+    <div class="bt">
+        <h2>
+            HIFSA ANSARI
+        </h2>
+        <h3>
+            Mariposa Ruzica
+        </h3>
+    </div>
+
+</body>
+
+</html>

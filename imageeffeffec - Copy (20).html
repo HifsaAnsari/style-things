@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+    <link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+    <link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+    <title>CodePen - #1401 - Image Hover</title>
+    <link rel='stylesheet' href='https://www.littlesnippets.net/css/codepen-result.css'>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,800);
+        @import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+        .snip1401 {
+            font-family: 'Playfair Display', Arial, sans-serif;
+            position: relative;
+            overflow: hidden;
+            margin: 10px;
+            min-width: 230px;
+            max-width: 315px;
+            max-height: 220px;
+            width: 100%;
+            color: #000000;
+            text-align: right;
+            font-size: 16px;
+            background-color: #000000;
+        }
+        
+        .snip1401 * {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-transition: all 0.35s ease;
+            transition: all 0.35s ease;
+        }
+        
+        .snip1401 img {
+            max-width: 100%;
+            backface-visibility: hidden;
+        }
+        
+        .snip1401 figcaption {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            z-index: 1;
+            opacity: 1;
+            padding: 30px 0 30px 10px;
+            background-color: #ffffff;
+            width: 40%;
+            -webkit-transform: translateX(150%);
+            transform: translateX(150%);
+        }
+        
+        .snip1401 figcaption:before {
+            position: absolute;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            right: 100%;
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 120px 120px 120px 0;
+            border-color: transparent #ffffff transparent transparent;
+        }
+        
+        .snip1401:after {
+            position: absolute;
+            bottom: 50%;
+            right: 40%;
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 120px 120px 0 120px;
+            border-color: rgba(255, 255, 255, 0.5) transparent transparent transparent;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            -webkit-transition: all 0.35s ease;
+            transition: all 0.35s ease;
+        }
+        
+        .snip1401 h3,
+        .snip1401 p {
+            line-height: 1.5em;
+            -webkit-transform: translateX(-30px);
+            transform: translateX(-30px);
+            margin: 0;
+        }
+        
+        .snip1401 h3 {
+            margin: 0 0 5px;
+            line-height: 1.1em;
+            font-weight: 900;
+            font-size: 1.4em;
+            opacity: 0.75;
+        }
+        
+        .snip1401 p {
+            font-size: 0.8em;
+        }
+        
+        .snip1401 i {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 20px 30px;
+            font-size: 44px;
+            color: #ffffff;
+            opacity: 0;
+        }
+        
+        .snip1401 a {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+        }
+        
+        .snip1401:hover img,
+        .snip1401.hover img {
+            zoom: 1;
+            filter: alpha(opacity=50);
+            -webkit-opacity: 0.5;
+            opacity: 0.5;
+        }
+        
+        .snip1401:hover:after,
+        .snip1401.hover:after,
+        .snip1401:hover figcaption,
+        .snip1401.hover figcaption,
+        .snip1401:hover i,
+        .snip1401.hover i {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+            opacity: 1;
+        }
+    </style>
+    <script>
+        window.console = window.console || function(t) {};
+    </script>
+    <script>
+        if (document.location.search.match(/type=embed/gi)) {
+            window.parent.postMessage("resize", "*");
+        }
+    </script>
+</head>
+
+<body translate="no">
+    <figure class="snip1401">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample67.jpg" alt="sample67" />
+        <figcaption>
+            <h3>Eleanor Fant</h3>
+            <p>Which is worse, that everyone has his price, or that the price is always so low.</p>
+        </figcaption><i class="ion-ios-home-outline"></i>
+        <a href="#"></a>
+    </figure>
+    <figure class="snip1401 hover"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample93.jpg" alt="sample93" />
+        <figcaption>
+            <h3>Eric Widget</h3>
+            <p>I'm killing time while I wait for life to shower me with meaning and happiness.</p>
+        </figcaption><i class="ion-ios-personadd-outline"></i>
+        <a href="#"></a>
+    </figure>
+    <figure class="snip1401"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample87.jpg" alt="sample87" />
+        <figcaption>
+            <h3>Will Barrow</h3>
+            <p>The only skills I have the patience to learn are those that have no real application in life. </p>
+        </figcaption><i class="ion-ios-location-outline"></i>
+        <a href="#"></a>
+    </figure>
+    <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script id="rendered-js">
+        /* Demo purposes only */
+        $(".hover").mouseleave(
+            function() {
+                $(this).removeClass("hover");
+            });
+        //# sourceURL=pen.js
+    </script>
+</body>
+
+</html>
